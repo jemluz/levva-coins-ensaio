@@ -2,8 +2,11 @@ import { AuthLayout } from "../../layouts/AuthLayout";
 
 export function Login() {
   return (
-    <AuthLayout>
-      <p>Login</p>
+    <AuthLayout
+      title="Login"
+      subtitle="Gerenciar suas entradas e saídas nunca foi tão simples."
+    >
+      <p>form de login</p>
     </AuthLayout>
   )
 }

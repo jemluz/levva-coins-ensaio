@@ -1,3 +1,9 @@
+import { AuthLayout } from "../../layouts/AuthLayout";
+
 export function Login() {
-  return <p>Login</p>
+  return (
+    <AuthLayout>
+      <p>Login</p>
+    </AuthLayout>
+  )
 }

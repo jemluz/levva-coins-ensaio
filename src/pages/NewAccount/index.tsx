@@ -1,3 +1,9 @@
+import { AuthLayout } from "../../layouts/AuthLayout";
+
 export function NewAccount() {
-  return <p>Cadastro</p>
+  return (
+    <AuthLayout>
+      <p>Cadastro</p>
+    </AuthLayout>
+  )
 }

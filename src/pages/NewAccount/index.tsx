@@ -1,4 +1,5 @@
 import { AuthLayout } from "../../layouts/AuthLayout";
+import { Form, FormInput } from "../../styles/global";
 
 export function NewAccount() {
   return (
@@ -6,13 +7,13 @@ export function NewAccount() {
       title="Cadastro"
       subtitle="Crie sua conta e começe a gerenciar suas finanças."
     >
-      <form>
-        <input type="name" placeholder="Nome e sobrenome" />
-        <input type="email" placeholder="E-mail" />
-        <input type="password" placeholder="Senha" />
-        <input type="password" placeholder="Confirme a senha" />
+      <Form>
+        <FormInput type="name" placeholder="Nome e sobrenome" />
+        <FormInput type="email" placeholder="E-mail" />
+        <FormInput type="password" placeholder="Senha" />
+        <FormInput type="password" placeholder="Confirme a senha" />
         <button type="submit">Entrar</button>
-      </form>
+      </Form>
     </AuthLayout>
   )
 }

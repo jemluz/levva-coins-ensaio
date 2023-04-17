@@ -6,7 +6,11 @@ export function Login() {
       title="Login"
       subtitle="Gerenciar suas entradas e saídas nunca foi tão simples."
     >
-      <p>form de login</p>
+      <form>
+        <input type="email" placeholder="E-mail" />
+        <input type="password" placeholder="Senha" />
+        <button type="submit">Entrar</button>
+      </form>
     </AuthLayout>
   )
 }

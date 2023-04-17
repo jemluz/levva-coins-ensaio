@@ -19,4 +19,24 @@ export const AuthWrapper = styled.main`
 
   padding: 0 1rem;
   margin: 0 auto;
+
+  header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+`;
+
+export const AuthContent = styled.div`
+  div {
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      min-width: 360px;
+    }
+  }
 `;

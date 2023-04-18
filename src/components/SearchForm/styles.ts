@@ -22,5 +22,29 @@ export const SearchFormContainer = styled.form`
     }
   }
 
-  
+  button {
+    grid-column: 3 / 4;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.75rem;
+    padding: 1rem;
+
+    background: transparent;
+    border: 1px solid ${props => props.theme["yellow-300"]};
+    color: ${props => props.theme["yellow-300"]};
+    border-radius: 6px;
+
+    font-weight: bold;
+    transition: all .3s;
+
+    &:hover {
+      background: ${props => props.theme["yellow-500"]};
+      border-color: ${props => props.theme["yellow-500"]};
+      color: ${props => props.theme["gray-600"]};
+      transition: all .2s;
+      cursor: pointer;
+    }
+  }
 `;

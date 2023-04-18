@@ -3,6 +3,8 @@ import * as Dialog from '@radix-ui/react-dialog';
 import logoImg from '../../assets/logo.svg';
 import { ModalLayout } from "../../layouts/Modal";
 import { ReactNode } from "react";
+import { Form, FormButton, FormInput, TransactionType, TransactionTypeButton } from "../../styles/global";
+import { ArrowCircleDown, ArrowCircleUp } from "phosphor-react";
 
 export function Header() {
   const newCategoryButton: ReactNode = <NewCategoryButton>Nova Categoria</NewCategoryButton>;
@@ -18,9 +20,28 @@ export function Header() {
 
         <div>
           <ModalLayout title="Nova Categoria" trigger={newCategoryButton}>
+
           </ModalLayout>
 
           <ModalLayout title="Nova Transação" trigger={newTransactionButton}>
+            <Form>
+              <FormInput type="text" placeholder="Descrição" required />
+              <FormInput type="number" placeholder="Preço" required />
+              <FormInput type="text" placeholder="Categoria" required />
+
+              <TransactionType>
+                <TransactionTypeButton variant="income">
+                  <ArrowCircleUp size={24} />
+                  Entrada
+                </TransactionTypeButton>
+                <TransactionTypeButton variant="outcome">
+                  <ArrowCircleDown size={24} />
+                  Saída
+                </TransactionTypeButton>
+              </TransactionType>
+
+              <FormButton type="submit">Cadastrar</FormButton>
+            </Form>
           </ModalLayout>
         </div>
 

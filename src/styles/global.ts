@@ -64,3 +64,14 @@ export const FormButton = styled.button`
     border: 1px solid ${props => props.theme["yellow-500"]};
   }
 `;
+
+interface TransactionTypeButtonProps {
+  variant: 'income' | 'outcome';
+}
+
+export const TransactionType = styled.div`
+`;
+
+export const TransactionTypeButton = styled.button<TransactionTypeButtonProps>`
+
+`

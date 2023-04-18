@@ -1,35 +1,32 @@
 import { HeaderContainer, HeaderContent, NewCategoryButton, NewTransactionButton, UserAvatar } from "./styles";
 import * as Dialog from '@radix-ui/react-dialog';
 import logoImg from '../../assets/logo.svg';
+import { ModalLayout } from "../../layouts/Modal";
+import { ReactNode } from "react";
 
 export function Header() {
+  const newCategoryButton: ReactNode = <NewCategoryButton>Nova Categoria</NewCategoryButton>;
+
+  const newTransactionButton: ReactNode = <NewTransactionButton>Nova Transação</NewTransactionButton>;
+
+  const userAvatar: ReactNode = <UserAvatar src="https://github.com/jemluz.png" alt="" />;
+
   return (
     <HeaderContainer>
       <HeaderContent>
         <img src={logoImg} alt="" />
 
         <div>
-          <NewCategoryButton>Nova Categoria</NewCategoryButton>
+          <ModalLayout title="Nova Categoria" trigger={newCategoryButton}>
+          </ModalLayout>
 
-          <Dialog.Root>
-            <Dialog.Trigger asChild>
-              <NewTransactionButton>Nova Transação</NewTransactionButton>
-            </Dialog.Trigger>
-
-            <Dialog.Portal>
-              <Dialog.Overlay>
-                <Dialog.Content>
-                  <Dialog.Title>Nova transação</Dialog.Title>
-
-                  <Dialog.Close />
-                </Dialog.Content>
-              </Dialog.Overlay>
-            </Dialog.Portal>
-          </Dialog.Root>
+          <ModalLayout title="Nova Transação" trigger={newTransactionButton}>
+          </ModalLayout>
         </div>
 
       </HeaderContent>
-      <UserAvatar src="https://github.com/jemluz.png" alt="" />
+      <ModalLayout title="Meu Perfil" trigger={userAvatar}>
+      </ModalLayout>
 
     </HeaderContainer>
   )

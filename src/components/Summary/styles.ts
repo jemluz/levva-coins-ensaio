@@ -13,7 +13,11 @@ export const SummaryContainer = styled.section`
   gap: 1rem;
   margin-top: -5rem;
 `
+interface SummaryCardProps {
+  variant?: "balance"
+}
 
+export const SummaryCard = styled.div<SummaryCardProps>`
   background: ${(p) => p.theme["gray-500"]};
   border-radius: 6px;
   padding: 2rem;
@@ -31,4 +35,16 @@ export const SummaryContainer = styled.section`
     font-size: 2rem; 
   }
 
+  ${(p => p.variant === "balance" && css`
+    background: linear-gradient(to bottom,  ${p.theme["gray-500"]}, ${p.theme["gray-700"]});
+    border-right: 2px solid ${(p) => p.theme["yellow-500"]};
+
+    header {
+      color: ${(p) => p.theme["yellow-500"]};
+    }
+
+    strong {
+      color: ${(p) => p.theme["yellow-500"]};
+    }
+  `)}
 `

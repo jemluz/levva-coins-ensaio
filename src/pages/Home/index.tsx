@@ -1,3 +1,8 @@
+import { HomeWrapper } from "./styles";
+
 export function Home() {
-  return <p>home</p>
+  return (
+    <HomeWrapper>
+    </HomeWrapper>
+  )
 }

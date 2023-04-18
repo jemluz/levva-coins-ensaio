@@ -44,6 +44,20 @@ export const NewCategoryButton = styled.button`
 `;
 
 export const NewTransactionButton = styled.button`
+  height: 50px;
+  border: 0;
+  background: ${(props) => props.theme["yellow-300"]};
+  color: ${(props) => props.theme["gray-600"]};
+  font-weight: bold;
+  padding: 0 1.25rem;
+  border-radius: 6px;
+  transition: background-color .5s;
+
+  &:hover {
+    cursor: pointer;
+    background: ${(props) => props.theme["yellow-500"]};
+  }
 `;
+
 export const UserAvatar = styled.img`
 `;

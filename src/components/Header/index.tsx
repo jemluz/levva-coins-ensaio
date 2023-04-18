@@ -19,7 +19,10 @@ export function Header() {
 
         <div>
           <ModalLayout title="Nova Categoria" trigger={newCategoryButton}>
-
+            <Form>
+              <FormInput type="name" value="Descrição" />
+              <FormButton type="submit">Cadastrar</FormButton>
+            </Form>
           </ModalLayout>
 
           <ModalLayout title="Nova Transação" trigger={newTransactionButton}>

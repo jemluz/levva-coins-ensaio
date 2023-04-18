@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 import * as Dialog from '@radix-ui/react-dialog';
+import { CloseButton, Content, Overlay } from "./styles";
+import { X } from "phosphor-react";
 
 interface ModalLayoutProps {
   title: string;
@@ -17,16 +19,19 @@ export function ModalLayout({
       <Dialog.Trigger asChild>
         {trigger}
       </Dialog.Trigger>
+
       <Dialog.Portal>
-        <Dialog.Overlay>
-          <Dialog.Content>
+        <Overlay>
+          <Content>
             <Dialog.Title>{title}</Dialog.Title>
 
-            <Dialog.Close />
+            <CloseButton>
+              <X size={24} />
+            </CloseButton>
 
             {children}
-          </Dialog.Content>
-        </Dialog.Overlay>
+          </Content>
+        </Overlay>
       </Dialog.Portal>
     </Dialog.Root>
   )

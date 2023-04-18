@@ -26,6 +26,12 @@ export function Header() {
 
       </HeaderContent>
       <ModalLayout title="Meu Perfil" trigger={userAvatar}>
+        <Form>
+          <UserAvatar src="https://github.com/jemluz.png" alt="Foto de perfil" variant="large" />
+          <FormInput type="email" value="Jemima Luz" />
+          <FormInput type="email" placeholder="jemima.luz@levva.io" disabled />
+          <FormButton type="submit">Atualizar</FormButton>
+        </Form>
       </ModalLayout>
 
     </HeaderContainer>

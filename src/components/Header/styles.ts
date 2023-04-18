@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const HeaderContainer = styled.header`
   background: linear-gradient(to bottom, ${(props) => props.theme.black}, ${(props) => props.theme["gray-600"]});
@@ -61,7 +61,11 @@ export const NewTransactionButton = styled.button`
   }
 `;
 
-export const UserAvatar = styled.img`
+interface UserAvatarProps {
+  variant?: "large";
+}
+
+export const UserAvatar = styled.img<UserAvatarProps>`
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 99px;
@@ -78,4 +82,10 @@ export const UserAvatar = styled.img`
     box-shadow: 0px 0px 10px 20px #00000015;
     cursor: pointer;
   }
+
+  ${(p => p.variant === "large" && css`
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 1rem;
+  `)}
 `;

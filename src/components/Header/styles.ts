@@ -23,7 +23,26 @@ export const HeaderContent = styled.div`
 `;
 
 export const NewCategoryButton = styled.button`
+  height: 50px;
+  background: ${(props) => props.theme["gray-500"]};
+  border: 1px solid transparent;
+  color: ${(props) => props.theme.white};
+  font-weight: bold;
+
+  border-radius: 6px;
+
+  padding: 0 1.25rem;
+  margin-right: 1rem;
+  transition: all .3s;
+
+  &:hover {
+    cursor: pointer;
+    background: ${(props) => props.theme["gray-600"]};
+    color: ${(props) => props.theme["yellow-500"]};
+    border: 1px solid ${(props) => props.theme["yellow-500"]};
+  }
 `;
+
 export const NewTransactionButton = styled.button`
 `;
 export const UserAvatar = styled.img`

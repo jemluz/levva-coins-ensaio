@@ -25,7 +25,7 @@ export function Summary() {
       <SummaryCard>
         <header>
           <span>Total</span>
-          <CurrencyDollar size={32} color="#fff" />
+          <CurrencyDollar size={32} color="#FFC600" />
         </header>
 
         <strong>R$ 17.400,00</strong>

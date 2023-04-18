@@ -1,19 +1,17 @@
 
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 export const SummaryContainer = styled.section`
-  grid-column: 2;
+  grid-column: 2 / 3;
 
   width: 100%;
   max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: 23rem 23rem 22rem;
+
+  gap: 1rem;
   margin-top: -5rem;
 `
 
-export const SummaryCard = styled.div`
 `

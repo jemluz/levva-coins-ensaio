@@ -10,7 +10,18 @@ export const HeaderContainer = styled.header`
   display: grid;
   grid-template-columns: 1fr 70rem 7rem 1fr;
 `;
+
 export const HeaderContent = styled.div`
+  width: 100%;
+  max-width: 70rem;
+
+  grid-column: 2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 export const NewCategoryButton = styled.button`
 `;
 export const NewTransactionButton = styled.button`
